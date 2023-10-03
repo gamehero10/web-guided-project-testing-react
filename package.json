@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.23.0",
     "@testing-library/jest-dom": "^5.10.1",
     "@testing-library/react": "^10.2.1",
     "@testing-library/user-event": "^11.4.2",
-    "axios": "^0.19.2",
-    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "axios": "^1.5.1",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "module_name": "^1.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "^5.0.1",
+    "uuid": "^9.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,6 +38,13 @@
     ]
   },
   "devDependencies": {
-    "@sheerun/mutationobserver-shim": "^0.3.3"
+    "@sheerun/mutationobserver-shim": "^0.3.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "jest-environment-jsdom-sixteen": "^2.0.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
   }
 }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-import { fetchMissions } from "./api/fetchMissions";
+import fetchMissions from "./api/fetchMissions.js";
 
 import MissionForm from "./components/MissionForm";
 import MissionsList from "./components/MissionsList";
@@ -24,9 +23,11 @@ export default function App() {
   };
   return (
     <div className="App">
-      <h1>Space Missions</h1>
+      <h1>Space Missions</h1>   
       <MissionForm getData={getData} isFetchingData={isFetchingData} />
       <MissionsList error={error} missions={missions} />
     </div>
   );
 }
+
+
